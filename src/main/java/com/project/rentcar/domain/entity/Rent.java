@@ -27,7 +27,7 @@ public class Rent {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "Carid", foreignKey = @ForeignKey(name = "FK_RENT_CAR",
-    foreignKeyDefinition = "FOREIGN KEY(Carid) REFERENCES user(Carid) ON DELETE CASCADE ON UPDATE CASCADE"))
+    foreignKeyDefinition = "FOREIGN KEY(Carid) REFERENCES car(Carid) ON DELETE CASCADE ON UPDATE CASCADE"))
     private Car car;
 
     @Column(name="rentDate")
