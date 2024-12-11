@@ -34,7 +34,7 @@ public class Review {
     private byte[] image;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserId", foreignKey = @ForeignKey(name = "FK_REVIEW_USER",
+    @JoinColumn(name = "UserId", foreignKey = @ForeignKey(name = "FK_REVIEW_MEMBER_ID",
     foreignKeyDefinition = "FOREIGN KEY(UserId) REFERENCES user(userId) ON DELETE CASCADE ON UPDATE CASCADE"))
     private User user;
 }
